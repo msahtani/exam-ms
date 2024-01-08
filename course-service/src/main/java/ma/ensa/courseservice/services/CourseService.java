@@ -7,6 +7,8 @@ import ma.ensa.courseservice.models.Course;
 import ma.ensa.courseservice.repositories.CourseRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class CourseService {
@@ -26,5 +28,9 @@ public class CourseService {
 
     }
 
+    public List<Course> getAllCourses() {
 
+        return repository.findAll();
+
+    }
 }
