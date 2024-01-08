@@ -33,4 +33,13 @@ public class CourseService {
         return repository.findAll();
 
     }
+
+
+    public Course getCourseById(long id){
+        return repository
+                .findById(id)
+                .orElseThrow(
+                        () -> new RuntimeException("COURSE NOT FOUND")
+                );
+    }
 }
